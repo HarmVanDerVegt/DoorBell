@@ -1,0 +1,26 @@
+.listings  
+{  
+  table tr td  
+  {  
+    padding: 5px;  
+    vertical-align: top;  
+  }  
+
+
+dt  
+{  
+  color: #232;  
+  font-weight: bold;  
+  font-size: larger;  
+}  
+
+dd  
+{  
+  margin: 0;  
+}  
+}  
+#map_canvas  
+{  
+  width: 80%;  
+  height: 80%;  
+}  
