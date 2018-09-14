@@ -7,27 +7,22 @@
     })
 </script>
 
-<h1>Filename = list.html.erb</h1>
-
-<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
-
-<style type="text/css">  
-  html { height: 100% }  
-  body { height: 100%; margin: 0; padding: 0 }  
-  #map_canvas { height: 100% }   
-</style>  
+<h1>HTML succesvol ingevoerd</h1>
 
 <script type="text/javascript"
   src="http://maps.googleapis.com/maps/api/js?key=AIz&sensor=false">  
 </script>  
 
-<%= stylesheet_link_tag 'application' %>  
-<%=javascript_include_tag 'application'%>
-
 <h1>Index van bellers</h1>
 
 <table>
   <thead>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+  <style type="text/css">  
+   html { height: 100% }  
+   body { height: 100%; margin: 0; padding: 0 }  
+   #map_canvas { height: 100% }   
+  </style>  
   <tr>
     <th>Beller</th>
     <th>Gebeld op</th>
@@ -40,6 +35,8 @@
     <tr class="image-class">
       <td><%= link_to image_tag(image.image, border: 0, size: "100x100"), {action: 'show', controller: 'images', id: image}, class: "image-link", target: :_blank %></td>
       <td><%= image.created_at.strftime("%H:%M:%S") %><br><%= image.created_at.strftime("%d %B") %></td>
+	  <%= stylesheet_link_tag 'application' %> 
+	  <%=javascript_include_tag 'application'%>
       <% if image.finished.nil? %>
         <td><%= link_to 'Accept', accept_path(image), class: 'btn btn-accept' %></td>
         <td><%= link_to 'Reject', reject_path(image), class: 'btn-reject' %></td>
