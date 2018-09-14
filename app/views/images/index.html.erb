@@ -7,22 +7,11 @@
     })
 </script>
 
-<h1>HTML succesvol ingevoerd</h1>
-
-<script type="text/javascript"
-  src="http://maps.googleapis.com/maps/api/js?key=AIz&sensor=false">  
-</script>  
-
+<h1>pls werk</h1> 
 <h1>Index van bellers</h1>
 
 <table>
   <thead>
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
-  <style type="text/css">  
-   html { height: 100% }  
-   body { height: 100%; margin: 0; padding: 0 }  
-   #map_canvas { height: 100% }   
-  </style>  
   <tr>
     <th>Beller</th>
     <th>Gebeld op</th>
@@ -31,6 +20,9 @@
   </thead>
 
   <tbody>
+	<script type="text/javascript"
+		src="http://maps.googleapis.com/maps/api/js?key=AIz&sensor=false">  
+	</script> 
   <% @images.order('created_at DESC').each do |image| %>
     <tr class="image-class">
       <td><%= link_to image_tag(image.image, border: 0, size: "100x100"), {action: 'show', controller: 'images', id: image}, class: "image-link", target: :_blank %></td>
@@ -44,6 +36,12 @@
       <td><%= link_to 'Delete', image, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn-delete" %></td>
     </tr>
   <% end %>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+	<style type="text/css">  
+		html { height: 100% }  
+		body { height: 100%; margin: 0; padding: 0 }  
+		#map_canvas { height: 100% }   
+	</style>  
   </tbody>
 </table>
 
