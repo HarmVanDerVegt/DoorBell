@@ -1,0 +1,12 @@
+{
+  "name": "Deurbel",
+  "short_name": "deurbel",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/images/pi.jpg",
+      "sizes": "900x900",
+      "type": "image/jpg"
+    }
+  ]
+}

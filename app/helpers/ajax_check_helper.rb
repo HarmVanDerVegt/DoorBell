@@ -1,0 +1,2 @@
+module AjaxCheckHelper
+end
